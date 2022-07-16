@@ -1,13 +1,13 @@
 <% if params[:user_id].nil? %>
   <div class="container">
-    <%= render 'search_form' %>
-  <% else %>
-    <div class="box">
+    <div class="row">
+      <%= render 'search_form' %>
+    <% else %>
       <%= render 'search_form' %>
     </div>
-    <div class="column">
+    <div class="container d-flex justify-content-center pt-5">
       <% @photos.each do |photo| %>
-        <div class="col-md-auto">
+        <div class="col">
           <img src="<%=Flickr.url_n(photo) %>"/>
         </div>
       <% end %>
