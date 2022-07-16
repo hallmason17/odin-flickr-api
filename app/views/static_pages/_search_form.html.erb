@@ -1,3 +1,4 @@
+<div class="container justify-content-center">
 <%= form_with(url: "/", method: 'get', local: true) do %>
   <div class="form-group">
     <%= text_field_tag :user_id, nil, placeholder: "Enter ID of User" %>
@@ -5,4 +6,5 @@
   <div class="form-group">
     <%= submit_tag "Show Photos", class: "btn btn-block" %>
   </div>
+</div>
 <% end %>
